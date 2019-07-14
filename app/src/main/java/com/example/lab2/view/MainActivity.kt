@@ -23,9 +23,12 @@ class MainActivity : AppCompatActivity(),LoginView {
         Glide.with(this).load(R.drawable.logo).into(imgLoad)
         loginPresenter =LoginPresenter(this)
 
+        listener()
+    }
+
+    private fun listener(){
         var email=edtUsername.text.toString()
         var password = edtPassword.text.toString().trim()
-
 
         btnDownload.setOnClickListener {
             Log.d("LOGDDSSSSSSSSS","$email")
@@ -34,10 +37,6 @@ class MainActivity : AppCompatActivity(),LoginView {
             }
 
         }
-        listener()
-    }
-
-    private fun listener(){
 
     }
 
